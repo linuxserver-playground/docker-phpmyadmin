@@ -8,8 +8,9 @@ summary: |-
 upstream:
   url: https://github.com/phpmyadmin/phpmyadmin/
   version:
-    type: command
-    run: curl -sL 'https://www.phpmyadmin.net/home_page/version.txt' | head -n 1 | cut -d ' ' -f 1
+    type: regex
+    url: https://www.phpmyadmin.net/home_page/version.txt
+    pattern: \A\s*(\S+)
 
 release:
   branch: main
