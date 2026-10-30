@@ -11,6 +11,13 @@ upstream:
     type: regex
     url: https://www.phpmyadmin.net/home_page/version.txt
     pattern: \A\s*(\S+)
+  notes:
+    type: rss
+    url: https://www.phpmyadmin.net/news/feed/
+    title: phpMyAdmin ${VERSION} is released
+  sponsor:
+  - name: phpMyAdmin
+    url: https://www.phpmyadmin.net/donate/
 
 release:
   branch: main
